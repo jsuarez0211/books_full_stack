@@ -1,0 +1,17 @@
+{
+    "name": "books_full_stack",
+    "version": "1.0.0",
+    "description": "",
+    "workspaces": [
+        "backend",
+        "frontend"
+    ],
+    "scripts": {
+        "start:backend": "npm --prefix backend start",
+        "start:frontend": "npm --prefix frontend start",
+        "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+    },
+    "devDependencies": {
+        "concurrently": "^7.0.0"
+    }
+}
