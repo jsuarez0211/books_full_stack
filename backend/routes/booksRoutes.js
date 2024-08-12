@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const Book = require("../models/booksModels");
+const Book = require("../models/booksModel");
+const User = require("../models/usersModel");
 
 //Get all
 router.get("/", async (req, res) => {
   try {
-    console.log(Book);
     const allBooks = await Book.find();
     res.status(200).json(allBooks);
   } catch (error) {
