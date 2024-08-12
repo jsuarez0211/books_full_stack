@@ -11,4 +11,13 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.post("/login", async (req, res) => {
+  try {
+    const { username, password } = req.body;
+    if (username || password) {
+      res.status().json({ message: "Please fill user and password" });
+    }
+    const user = User.find();
+  } catch (error) {}
+});
 module.exports = router;
